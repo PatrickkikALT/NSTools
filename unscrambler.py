@@ -1,14 +1,4 @@
-import requests
-import apikey
-
-def getStations():
-    key = apikey.apiKey
-    url = "https://gateway.apiportal.ns.nl/nsapp-stations/v3?countryCodes=NL"
-    header = {'Ocp-Apim-Subscription-Key': key}
-    response = requests.get(url, headers=header).json()
-    stationNames = [station['names']['long'] for station in response['payload'] if station['country'] == 'NL']
-    return stationNames
-stations = getStations()
+stations = open('stations.json', 'r')
 scrambledStation = input()
 
 filteredStations = []
@@ -22,7 +12,7 @@ for station in stations:
     if allCharsPresent:
         filteredStations.append(station)
 stations = filteredStations
-strippedText = str(stations).replace('[','').replace(']','').replace("'","")
+strippedText = str(stations).replace('[','').replace(']','').replace("'","").replace("\n", "")
 print(strippedText)
 input()
 
