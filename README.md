@@ -1,11 +1,7 @@
-# stationunscrambler
+# ns tools
 
-doet die puzzles in de trein waar je uren over nadenkt voor je want ik ben lui
+dit zijn gewoon wat willekeurige tools die ik heb gemaakt omdat ik me verveelde
 
-hoe gebruik je het:
-
-- open unscrambler.py
-
-- typ de puzzel in
-
-- tada je hebt de antwoord
+op het moment is er:
+- station naam ontcijferaar
+- willekeurige station tool
